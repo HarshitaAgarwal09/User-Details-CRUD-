@@ -1,6 +1,20 @@
-<p>
-  user-list works! 
-</p>
+<div>
+<h1>
+  USER-LIST
+</h1>
+
 <div *ngFor='let user of UsersList'>
-	<p>{{user.id}}  {{user.firstName}}  {{user.lastName}}  {{user.email}}</p>	
+	<p>{{user.id}}  {{user.firstName}}  {{user.lastName}}  {{user.email}}
+		
+		<button class="btn btn-info" (click)="updateuser(user)">
+			<span class="glyphicon glyphicon-pencil"></span>
+		</button>
+		
+		<button class="btn btn-danger" (click)="deleteuser(user)">
+			<span class="glyphicon glyphicon-trash"></span>
+		</button>
+	
+	</p>	
+</div>
+<button class="btn btn-primary" (click)="adduser()">Add User</button>
 </div>
