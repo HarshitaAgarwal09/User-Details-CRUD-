@@ -22,6 +22,9 @@ export class UserService {
   getusers():Observable<User[]>{
   	return this.http.get<User[]>("http://localhost:3000/users");
   }
+  getUserById(id){
+    return this.http.get<User>("http://localhost:3000/users/"+id);
+  }
   adduser(user: User){
   return this.http.post("http://localhost:3000/users/", user);
   }

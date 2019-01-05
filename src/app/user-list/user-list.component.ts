@@ -30,6 +30,8 @@ export class UserListComponent implements OnInit {
       })
   }
   updateuser(user:User){
-    //Navigate to add user component >>Link the the user with this id to the ng Form Elements >> Update the details( Call the update method of the user service)
-  }
+    localStorage.removeItem("editUserId");
+    localStorage.setItem("editUserId", user.id.toString());
+    this.router.navigate(['edituser']);
+    }
 }

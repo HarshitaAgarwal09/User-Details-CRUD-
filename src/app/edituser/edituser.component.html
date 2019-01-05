@@ -1,3 +1,6 @@
+<p>
+  edituser works!
+</p>
 <h2 style="text-align: center;">ENTER DETAILS</h2>
 <form #Users = "ngForm">
 <div class="form-group">
@@ -18,4 +21,4 @@
 </div>
 {{Users.value | json}}
 </form>
-<button class="btn btn-success" (click)="adduser()">Save</button>
+<button class="btn btn-success" (click)="updateuser()">Update</button>
