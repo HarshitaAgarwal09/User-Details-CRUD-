@@ -1,0 +1,18 @@
+<h1 style="text-align: center">LOGIN</h1>
+<div>
+	
+</div>
+<form [formGroup]="LoginForm" (ngSubmit)="onSubmit()">
+	<div class="form-group" >
+		<label>EMAIL ID:</label>
+		<input type="email" class="form-control" formControlName="email" id="email" required>
+
+		<div class="text-danger" *ngIf="LoginForm.get('email').errors && LoginForm.get('email').dirty && LoginForm.get('email').errors.required ">Email required</div>
+	</div>
+	<div class="form-group">
+		<label>PASSWORD:</label>
+		<input type="password" id="password" class="form-control" formControlName="password" required>
+		<div  class="text-danger" *ngIf="LoginForm.get('password').errors && LoginForm.get('password').dirty && LoginForm.get('password').errors.required " >Password required</div>
+	</div>
+	<button class="btn btn-success" type="submit">Login</button>
+</form>
